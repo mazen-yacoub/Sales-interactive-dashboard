@@ -31,7 +31,7 @@ Data Cleaning and Transformation:
 Cleaned and transformed the data directly in Power BI to ensure consistency and accuracy.
 Adjusted formatting, handled missing values, and refined data types where needed.
 
-Measures and Calculations:
+**Measures and Calculations**:
 
 Created measures for key metrics such as total sales, sales by category, and budget amounts.
 Implemented calculated fields for year-over-year growth and sales-to-budget comparisons.
