@@ -36,8 +36,8 @@ Adjusted formatting, handled missing values, and refined data types where needed
 Created measures for key metrics such as total sales, sales by category, and budget amounts.
 Implemented calculated fields for year-over-year growth and sales-to-budget comparisons.
 
-Power BI Dashboard:
-
+Power BI Dashboard:  [interactive Dashboard View](https://project.novypro.com/kvsyn2)  
+ 
 **Developed an interactive and visually appealing dashboard showcasing key insights**:
 - Total sales by product and customer segments.
 - Yearly sales trends and comparisons with budget data.
