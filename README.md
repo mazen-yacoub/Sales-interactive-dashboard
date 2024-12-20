@@ -6,13 +6,13 @@ This project focuses on analyzing sales and budget data using the AdventureWorks
 1-**Data Extraction from SQL Server**:
 
 Source Database: AdventureWorksDW2022
-Extracted Tables:
-Dimension Tables:
-- Product Table: Includes product details such as names, categories, and subcategories.
-- Customer Table: Contains customer information like demographics and geography.
-- Calendar Table: Provides date-related information like year, month, and day.
-Fact Table:
-- InternetSales Table: Captures sales transactions, including quantities, sales amounts, and customer-product mappings.
+ Extracted Tables:
+- Dimension Tables:
+  - Product Table: Includes product details such as names, categories, and subcategories.
+  - Customer Table: Contains customer information like demographics and geography.
+  - Calendar Table: Provides date-related information like year, month, and day.
+- Fact Table:
+  - InternetSales Table: Captures sales transactions, including quantities, sales amounts, and customer-product mappings.
 SQL Queries: Customized SQL scripts were used to extract only the necessary columns for analysis. Each extracted table was saved as a separate CSV file for further processing.
 
 **Additional Data**:
