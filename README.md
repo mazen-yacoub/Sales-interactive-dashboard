@@ -13,7 +13,8 @@ Source Database: AdventureWorksDW2022
   - Calendar Table: Provides date-related information like year, month, and day.
 - Fact Table:
   - InternetSales Table: Captures sales transactions, including quantities, sales amounts, and customer-product mappings.
-SQL Queries: Customized SQL scripts were used to extract only the necessary columns for analysis. Each extracted table was saved as a separate CSV file for further processing.
+  
+ SQL Queries: Customized SQL scripts were used to extract only the necessary columns for analysis. Each extracted table was saved as a separate CSV file for further processing.
 
 **Additional Data**:
 
@@ -29,6 +30,7 @@ Data Cleaning and Transformation:
 
 Cleaned and transformed the data directly in Power BI to ensure consistency and accuracy.
 Adjusted formatting, handled missing values, and refined data types where needed.
+
 Measures and Calculations:
 
 Created measures for key metrics such as total sales, sales by category, and budget amounts.
