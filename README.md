@@ -1,47 +1,78 @@
-# Sales-interactive-dashboard
-## SQL PowerBI Project
+# Sales Interactive Dashboard
 
-This project focuses on analyzing sales and budget data using the AdventureWorksDW2022 SQL Server database and Power BI. The workflow includes extracting relevant tables from the database, transforming the data for analysis, and building a comprehensive Power BI dashboard. 
+An end-to-end Power BI analytics project built from the AdventureWorksDW2022 data warehouse. The project extracts sales, customer, product, calendar, and budget data; models it as a star schema; and publishes an interactive sales dashboard through GitHub Pages.
 
-1-**Data Extraction from SQL Server**:
+## Live Dashboard
 
-Source Database: AdventureWorksDW2022
- Extracted Tables:
-- Dimension Tables:
-  - Product Table: Includes product details such as names, categories, and subcategories.
-  - Customer Table: Contains customer information like demographics and geography.
-  - Calendar Table: Provides date-related information like year, month, and day.
-- Fact Table:
-  - InternetSales Table: Captures sales transactions, including quantities, sales amounts, and customer-product mappings.
-  
- SQL Queries: Customized SQL scripts were used to extract only the necessary columns for analysis. Each extracted table was saved as a separate CSV file for further processing.
+[Open the published dashboard](https://mazen-yacoub.github.io/Sales-interactive-dashboard/)
 
-**Additional Data**:
+## Project Objectives
 
-An Excel spreadsheet containing budget data for a range of years was added to complement the extracted SQL data.
-Data Modeling in Power BI:
+- Track internet sales performance across time, products, customers, and geography.
+- Compare actual sales with budget targets.
+- Identify high-performing product categories, subcategories, customers, and locations.
+- Package the project in a clean, reviewable structure for portfolio and analytics presentation use.
 
-Imported the CSV files and Excel budget file into Power BI.
-Established relationships between the tables to create a star schema:
-Fact Tables: InternetSales and Budget
-Dimension Tables: Product, Customer, and Calendar
-Modeled the data with appropriate primary and foreign key relationships for seamless analysis.
-Data Cleaning and Transformation:
+## Key Insights
 
-Cleaned and transformed the data directly in Power BI to ensure consistency and accuracy.
-Adjusted formatting, handled missing values, and refined data types where needed.
+- Bikes drive nearly all revenue, with Road Bikes and Mountain Bikes as the strongest subcategories.
+- Sales are broadly balanced by customer gender.
+- Revenue is geographically distributed, with strong city-level performance in London, Paris, and several Australian cities.
+- Late-year months show stronger seasonal performance, especially October through December.
+- Outdated products still contribute a meaningful share of revenue, which may require product lifecycle review.
 
-**Measures and Calculations**:
+## Repository Structure
 
-Created measures for key metrics such as total sales, sales by category, and budget amounts.
-Implemented calculated fields for year-over-year growth and sales-to-budget comparisons.
+```text
+.
+├── assets/
+│   └── images/              # Dashboard, model, and SQL workflow screenshots
+├── data/
+│   ├── budget/              # Budget source workbook
+│   └── raw/                 # Extracted CSV source tables
+├── docs/                    # Supporting documentation
+├── powerbi/                 # Power BI report file
+├── sql/                     # SQL extraction scripts
+├── index.html               # GitHub Pages landing page
+└── README.md
+```
 
-Power BI Dashboard:  [interactive Dashboard View](https://mazen-yacoub.github.io/Sales-interactive-dashboard/)  
- 
-**Developed an interactive and visually appealing dashboard showcasing key insights**:
-- Total sales by product and customer segments.
-- Yearly sales trends and comparisons with budget data.
-- Geographic distribution of sales performance.
-- Custom filters and slicers for enhanced interactivity.
-  
-This project demonstrates the end-to-end process of extracting, transforming, and visualizing sales and budget data using SQL Server and Power BI. It showcases data modeling skills, the use of SQL for focused data extraction, and advanced Power BI capabilities for analysis and dashboard creation.
+## Data Sources
+
+- `AdventureWorksDW2022` SQL Server database
+- Budget workbook: [sales_budget.xlsx](data/budget/sales_budget.xlsx)
+
+Extracted tables:
+
+- [fact_internet_sales.csv](data/raw/fact_internet_sales.csv)
+- [dim_calendar.csv](data/raw/dim_calendar.csv)
+- [dim_customer.csv](data/raw/dim_customer.csv)
+- [dim_product.csv](data/raw/dim_product.csv)
+
+## SQL Extraction Scripts
+
+- [fact_internet_sales.sql](sql/fact_internet_sales.sql)
+- [dim_calendar.sql](sql/dim_calendar.sql)
+- [dim_customer.sql](sql/dim_customer.sql)
+- [dim_product.sql](sql/dim_product.sql)
+
+## Power BI Report
+
+The report file is available at [powerbi/customer_analysis.pbix](powerbi/customer_analysis.pbix).
+
+The model uses a star schema:
+
+- Fact table: Internet sales
+- Supporting fact table: Budget
+- Dimensions: Calendar, Customer, Product
+
+## Dashboard Preview
+
+![Sales dashboard overview](assets/images/dashboard-overview.png)
+
+## Tools Used
+
+- SQL Server
+- Power BI
+- Excel
+- GitHub Pages
